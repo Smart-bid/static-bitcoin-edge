@@ -1,0 +1,32 @@
+.Header {
+    .wrapper-flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 20px;
+        .logo {
+            padding-top: 10px;
+            img {
+                max-width: 290px;
+            }
+        }
+        .head-info {
+            background-color: $pink;
+            .wrap {
+                display: flex;
+                align-items: center;
+                padding: 15px 10px;
+                img {
+                    max-height: 25px;
+                    margin-right: 10px;
+                }
+                strong {
+                    font-size: 20px;
+                    font-style: italic;
+                    line-height: 1;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
