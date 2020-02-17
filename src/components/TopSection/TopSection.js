@@ -14,17 +14,66 @@ import geoTrust from './images/geotrust.png'
 import secure from './images/secure.svg'
 import bluePlus from './images/plus-blue.svg'
 import greenPlus from './images/plus-green.svg'
+import stop from './images/stop.png'
 
 //Videos
 import en_1 from './en_1.mp4'
 
 export default class TopSection extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            showModal: false
+        }
+    }
+
+    body = document.querySelector("body");
+
+    componentDidMount() {
+        setTimeout(()=> {
+            this.setState({showModal: true})
+            this.body.classList.add(this.state.showModal)
+        },2000)
+
+
+    }
+
+    handleClose() {
+        this.setState({showModal: false})
+        this.body.classList.remove("true")
+    }
+
     render() {
         let languageManager = this.props.languageManager();
         return (
             <div className='TopSection'>
 
                 <Header languageManager={this.props.languageManager}/>
+
+                {/*Start Modal Window*/}
+                <section className={(this.state.showModal) ? 'modal-window active' : 'modal-window'}>
+                    <div className="wrapper">
+                        <div className="heading">
+                            <img src={stop} alt=""/>
+                            <div className="info">
+                                <p>
+                                    {languageManager.modal_heading[0]}
+                                </p>
+                                <p className="orange">
+                                    {languageManager.modal_heading[1]}
+                                </p>
+                                <p>
+                                    {languageManager.modal_heading[2]}
+                                </p>
+                            </div>
+                        </div>
+                        <Regform {...this.props} />
+                        <div className="close-modal-window">
+                            <span onClick={this.handleClose.bind(this)}>X</span>
+                        </div>
+                    </div>
+                </section>
+                {/*End Modal Window*/}
 
                 <div className="main-banner">
                     <div className="container">

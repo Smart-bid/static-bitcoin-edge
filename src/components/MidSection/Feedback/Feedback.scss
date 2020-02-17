@@ -1,0 +1,89 @@
+.Feedback {
+    background-image: url("../images/img-xl-2.png");
+    background-size: cover;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    .container {
+        .image {
+            img {
+                width: 150px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        .section-title {
+            font-size: 30px;
+            color: #fff;
+            text-align: center;
+        }
+        .green-section {
+            padding: 15px;
+            margin-top: 30px;
+            background-color: $green;
+            .Regform {
+                .inner {
+                    .form-wrapper {
+                        &.one {
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: space-between;
+                            .form-group {
+                                width: 49%;
+                                &.submit-btn {
+                                    width: 100%;
+                                    button {
+                                        position: relative;
+                                        max-width: 49%;
+                                        background-color: $blue;
+                                        margin-left: auto;
+                                        border: none;
+                                        &:hover {
+                                            background-color: $orange;
+                                        }
+                                        &:before {
+                                            content: "";
+                                            position: absolute;
+                                            top: 11px;
+                                            left: 24px;
+                                            height: 28px;
+                                            width: 28px;
+                                            background-image: url(//static.immediateedgereapp.com/re/images/claim-btn-arrow-right.svg);
+                                        }
+                                        &:after {
+                                            content: "";
+                                            position: absolute;
+                                            top: 11px;
+                                            right: 24px;
+                                            height: 28px;
+                                            width: 28px;
+                                            background-image: url(//static.immediateedgereapp.com/re/images/claim-btn-arrow-left.svg);
+                                        }
+                                    }
+                                }
+                                //Second Step
+                                .intl-tel-input {
+                                    width: 100%;
+                                }
+                            }
+                            .green-arrow {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .partners {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 45px;
+            padding-bottom: 25px;
+            img {
+                max-height: 43px;
+                opacity: .55;
+            }
+        }
+    }
+}

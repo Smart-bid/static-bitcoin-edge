@@ -31,7 +31,7 @@ export default class FBreviews extends Component {
                             <img src={facebookLogo} alt=""/>
                         </div>
                         <div className="curr-date">
-                            {moment(this.today).format("DD/MM/YYYY")}
+                            {moment(this.today).format("DD.MM.YYYY, HH:mm:ss")}
                         </div>
                     </div>
                     <div className="reviews-list">

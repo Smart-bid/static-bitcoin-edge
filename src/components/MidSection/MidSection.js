@@ -4,6 +4,7 @@ import React, { Component } from 'react'
 import Regform from '../TopSection/Regform/Regform'
 import Benefits from "./Benefits/Benefits";
 import FBreviews from "./FBreviews/FBreviews";
+import Feedback from "./Feedback/Feedback";
 
 //Images
 import uaFlag from './images/ua.svg'
@@ -143,7 +144,9 @@ export default class MidSection extends Component {
                     </div>
                 </section>
 
-                <FBreviews {...this.props}/>
+                {/*<FBreviews {...this.props}/>*/}
+
+                {/*<Feedback {...this.props}/>*/}
 
             </div>
 

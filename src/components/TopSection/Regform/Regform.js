@@ -12,6 +12,7 @@ export default class Regform extends Component {
                 first_name: "",
                 last_name: null,
                 email: "",
+                password: "Qa123456"
             },
             errors: '',
             step: 1
@@ -31,8 +32,6 @@ export default class Regform extends Component {
                 tempForm.first_name = getlName[0]
                 tempForm.last_name = getlName[1]
             } else tempForm.last_name = null
-
-            console.log(getlName);
         }
 
 
@@ -93,7 +92,9 @@ export default class Regform extends Component {
 
                         {(this.state.step === 1) ?
                             <div className='form-wrapper one'>
-                                {errorMsgs.map(arr => arr.map(error => <div key={error} className="errors">{error}</div>))}
+                                <div className="errors-messages">
+                                    {errorMsgs.map(arr => arr.map(error => <div key={error} className="errors">{error}</div>))}
+                                </div>
                                 <div className="form-group">
                                     <input className="form-control fname" type="text" name="first_name"
                                            placeholder={languageManager.fname} defaultValue={first_name}
@@ -105,7 +106,7 @@ export default class Regform extends Component {
                                            onChange={(e) => this.updateValue(e.target.name, e.target.value)}/>
                                 </div>
                                 <div className="green-arrow"><span> </span></div>
-                                <div className="form-group">
+                                <div className="form-group submit-btn">
                                     <button onClick={this.handleForward.bind(this)}
                                             className='registerBtn'>{languageManager.button}</button>
                                 </div>
